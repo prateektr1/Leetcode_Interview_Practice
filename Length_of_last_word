@@ -1,1 +1,15 @@
 
+class Solution {
+    public int lengthOfLastWord(String s) {
+        
+        String words[] = s.trim().split(" ");
+        int result =0;
+        String m = words[words.length-1];
+        for(char j : m.toCharArray())
+        {
+            if(Character.isAlphabetic(j))
+                result++;
+        }
+        return result;   
+    }
+}
